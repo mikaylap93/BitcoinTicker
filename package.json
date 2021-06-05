@@ -1,0 +1,18 @@
+{
+  "name": "bitcoinptsexier",
+  "version": "1.0.0",
+  "description": "Classic BTC ticker, but better looking",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mikayla Pace",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chart.js": "^3.3.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

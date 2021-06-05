@@ -1,0 +1,98 @@
+/***************ELEMENT SELECTORS******************/
+
+/*COLORS
+Prussian Blue #173753
+Iceburg #6DAEDB
+Turfts Blue #2892D7
+Charcol #1B4353
+BtsrpInfo #35cff1
+
+*/
+body {
+  background-color: black;
+  color: #6DAEDB;
+  /*font-family: 'Raleway', serif;*/
+  margin: 0;
+  text-align: center;
+
+}
+
+footer {
+  margin: 100px;
+}
+br{
+  height: 200px;
+}
+
+/****************CLASS SELECTORS********************/
+.about-section{
+  display: inline-block;
+  padding-top: 25%;
+  width: 50%;
+}
+.currency-pair {
+  background-color: #173753;
+  margin: 25px;
+  padding: 5px 100px 0 50px;
+  vertical-align: middle;
+}
+.currency-pair:hover{
+  background-color:#35cff1;
+}
+
+.exch-button{
+  margin-top:20px;
+  background-color: #6DAEDB;
+}
+.small-input{
+  margin:10px;
+}
+.small-output{
+  background-color: #173753;
+  align-items: center;
+  display: inline-block;
+  margin:10px;
+  padding-bottom: 25px;
+  width:40%;
+}
+
+.other-currencies{
+  background-color: black;
+  margin: 200px 0 200px 0;
+  display: inline-block;
+  padding-top: 75px;
+  text-align: center;
+  width: 100%;
+}
+
+.output-section{
+  background-color: #173753;
+
+}
+
+.title {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding-top: 75px;
+  padding-bottom: 25px;
+  text-align: center;
+  width: 50%;
+}
+
+#bitcoin-price-chart.line {
+  max-width: 400px;
+  height: 400px;
+
+  padding:0;
+  margin:0;
+
+}
+#bitcoin-price {
+  --color: #173753;
+  margin:0;
+  padding:0;
+
+
+
+
+}
