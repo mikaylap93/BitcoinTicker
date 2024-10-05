@@ -12,7 +12,7 @@ var weekPrices = [0,0,0,0,0,0,0];
 var priceGraphProportions=[0,0,0,0,0,0,0];
 var weekDates = [0,0,0,0,0,0,0];
 
-const bpiHistPriceURL = "http://api.coindesk.com/v1/bpi/historical/close/USD.json";
+const bpiHistPriceURL = "http://api.coindesk.com/v1/bpi/historical/close.json";
 
 app.get("/",function(req,res){
 
@@ -37,16 +37,16 @@ http.get(bpiHistPriceURL,function(histresponse){
         priceGraphProportions[i] =(weekPrices[i].toString())[1];
         count++;
       }
+
+      res.render('index',{
+        day1Price:weekPrices[0],tuesPrice:weekPrices[1],wedPrice:weekPrices[2],thursPrice:weekPrices[3],
+        friPrice:weekPrices[4],satPrice:weekPrices[5],sunPrice:weekPrices[6],
+        pGP1:priceGraphProportions[0],pGP2:priceGraphProportions[1],pGP3:priceGraphProportions[2],
+        pGP4:priceGraphProportions[3],pGP5:priceGraphProportions[4],pGP6:priceGraphProportions[5],
+        pGP7:priceGraphProportions[6],
+        day1:weekDates[0],day2:weekDates[1],day3:weekDates[2],day4:weekDates[3],day5:weekDates[4],day6:weekDates[5],day7:weekDates[6]});
   });
 });
-  //Send data
-  res.render('index',{
-  day1Price:weekPrices[0],tuesPrice:weekPrices[1],wedPrice:weekPrices[2],thursPrice:weekPrices[3],
-  friPrice:weekPrices[4],satPrice:weekPrices[5],sunPrice:weekPrices[6],
-  pGP1:priceGraphProportions[0],pGP2:priceGraphProportions[1],pGP3:priceGraphProportions[2],
-  pGP4:priceGraphProportions[3],pGP5:priceGraphProportions[4],pGP6:priceGraphProportions[5],
-  pGP7:priceGraphProportions[6],
-  day1:weekDates[0],day2:weekDates[1],day3:weekDates[2],day4:weekDates[3],day5:weekDates[4],day6:weekDates[5],day7:weekDates[6]});
 
 });
 

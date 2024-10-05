@@ -51,7 +51,12 @@ tickerAutoReloader(15);
       url: currentPriceUrl,
     })
     .done(function(res){
-      var currentPriceObject = JSON.parse(res);
+
+      if(typeof res === 'string'){
+        var currentPriceObject = JSON.parse(res);
+      }else{
+        var currentPriceObject = res;
+      }
 
       usdPrice = currentPriceObject.bpi.USD.rate;
       eurPrice = currentPriceObject.bpi.EUR.rate;
